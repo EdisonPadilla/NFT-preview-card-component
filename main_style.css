@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  /*Colors*/
+
+  /*Primary*/
+
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /*Neutral*/
+
+  --very-dark-blue-main-background: hsl(217, 54%, 11%);
+  --very-dark-blue-card-background: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--soft-blue);
+}
+
+main {
+  max-width: 100vw;
+  overflow: hidden;
+  background-color: var(--very-dark-blue-main-background);
+}
+
+.container1 {
+  position: relative;
+  margin: 9px 1%;
+  padding: 4%;
+  background-color: hsl(217, 54%, 11.5%);
+  border-radius: 8%;
+}
+
+.container2 {
+  padding: 5%;
+  background-color: hsl(217, 54%, 10.75%);
+  border-radius: 8%;
+}
+
+.main-content {
+  /*width: 85%;*/
+  margin: 16px auto;
+  padding: 18px;
+  background-color: var(--very-dark-blue-card-background);
+  border-radius: 18px;
+}
+
+.card-image-box {
+  position: relative;
+}
+
+.img-equilibrium {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+}
+
+.bg-hover-image {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 97%;
+  background-color: var(--cyan);
+  border-radius: 18px;
+  opacity: 0;
+  transition: all 0.7s;
+}
+
+.icon-view {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.7s;
+}
+
+.card-image-box:hover .icon-view {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.card-image-box:hover .bg-hover-image {
+  visibility: visible;
+  opacity: 0.5;
+}
+
+.card-title {
+  margin: 18px 0;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.card-title a {
+  color: var(--white);
+  transition: all 0.7s;
+}
+
+.card-title a:hover,
+.name-creator:hover {
+  color: var(--cyan);
+}
+
+.feature-box {
+  padding: 18px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+}
+
+.feature img {
+  height: 18px;
+  margin-right: 3px;
+}
+
+.ethereum-feature {
+  color: var(--cyan);
+  font-weight: 400;
+}
+
+.creator-data-box {
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var(--very-dark-blue-line);
+}
+
+.avatar-creator {
+  width: 45px;
+  height: 45px;
+  margin-right: 9px;
+  border: 1px solid var(--white);
+  border-radius: 50%;
+}
+
+.name-creator {
+  color: var(--white);
+  transition: all 0.7s;
+}
+
+@media (min-width: 1024px) {
+  main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .main-content {
+    width: 320px;
+  }
+
+  .bg-hover-image {
+    width: 304px;
+    height: 304px;
+  }
+}
