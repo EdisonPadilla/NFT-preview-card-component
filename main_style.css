@@ -41,22 +41,20 @@ main {
 }
 
 .container1 {
-  position: relative;
   margin: 9px 1%;
-  padding: 4%;
+  padding: 27px 5%;
   background-color: hsl(217, 54%, 11.5%);
-  border-radius: 8%;
+  border-radius: 9%;
 }
 
 .container2 {
-  padding: 5%;
+  padding: 0 4% 27px 4%;
   background-color: hsl(217, 54%, 10.75%);
-  border-radius: 8%;
+  border-radius: 9%;
 }
 
 .main-content {
-  /*width: 85%;*/
-  margin: 16px auto;
+  /*margin: 16px auto;*/
   padding: 18px;
   background-color: var(--very-dark-blue-card-background);
   border-radius: 18px;
@@ -163,20 +161,70 @@ main {
   transition: all 0.7s;
 }
 
-@media (min-width: 1024px) {
+.attribution {
+  margin: 1em 0;
+  font-size: 0.8em;
+  text-align: center;
+  color: var(--very-dark-blue-card-background);
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--very-dark-blue-main-background);
+  padding-bottom: 0.4em;
+  border-bottom: solid 2px transparent;
+  transition-duration: 0.5s;
+  animation-name: text-color;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+.attribution a:hover {
+  border-color: var(--very-dark-blue-main-background);
+}
+
+@media (min-width: 768px) {
   main {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
+
+  .container1 {
+    width: 410px;
+    margin: 0;
+    padding: 27px;
+    border-radius: 12%;
+  }
+
+  .container2 {
+    width: 356px;
+    padding: 0 18px 27px 18px;
+    border-radius: 12%;
   }
 
   .main-content {
     width: 320px;
   }
+}
 
-  .bg-hover-image {
-    width: 304px;
-    height: 304px;
+@keyframes text-color {
+  0% {
+    color: var(--cyan);
+  }
+  25% {
+    color: var(--soft-blue);
+  }
+  50% {
+    color: var(--very-dark-blue-main-background);
+  }
+  75% {
+    color: var(--soft-blue);
+  }
+  100% {
+    color: var(--cyan);
   }
 }
